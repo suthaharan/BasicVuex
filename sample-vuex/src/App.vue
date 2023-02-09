@@ -3,8 +3,8 @@
   <img alt="Vue logo" src="./assets/logo.png">
   <div class="counter">{{ $store.state.counter }}</div>
   <div class="buttons">
-    <button @click="decreaseCounter">-</button>
-    <button @click="increaseCounter">+</button>
+    <button @click="$store.commit('decrement')">-</button>
+    <button @click="$store.commit('increment')">+</button>
   </div>
 </div>
 </template>
@@ -13,16 +13,6 @@
 
 export default {
   name: 'App',
-  methods: {
-    increaseCounter(){
-      this.$store.commit('increment');
-      console.log(this.$store.state.counter);
-    },
-    decreaseCounter(){
-      this.$store.commit('decrement');
-      console.log(this.$store.state.counter);
-    }
-  }
 }
 </script>
 
