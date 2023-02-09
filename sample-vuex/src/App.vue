@@ -3,8 +3,8 @@
   <img alt="Vue logo" src="./assets/logo.png">
   <div class="counter">{{ $store.state.counter }}</div>
   <div class="buttons">
-    <button @click="$store.commit('decrement')">-</button>
-    <button @click="$store.commit('increment')">+</button>
+    <button @click="$store.dispatch('decrementCounter')">-</button>
+    <button @click="$store.dispatch('incrementCounter')">+</button>
   </div>
 </div>
 </template>
