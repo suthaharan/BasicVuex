@@ -1,11 +1,8 @@
 <template>
   <div class="app">
   <img alt="Vue logo" src="./assets/logo.png">
-  <div class="counter" :style="{color: $store.state.colorCode}">{{ $store.state.counter }}</div>
-  <div class="countersquared">
-    {{ $store.state.counter }}
-    <sup>2</sup> = {{ $store.getters.counterSquared }}
-  </div>
+  <MyCounter />
+  <CounterSquared />
   <div class="buttons">
     <button @click="$store.dispatch('decrementCounter')">-</button>
     <button @click="$store.dispatch('incrementCounter')">+</button>
@@ -20,6 +17,10 @@
 
 export default {
   name: 'App',
+  components: {
+    'MyCounter': require('@/components/MyCounter.vue').default,
+    'CounterSquared': require('@/components/CounterSquared.vue').default
+  },
   computed: {
     colorCode: {
       get(){
