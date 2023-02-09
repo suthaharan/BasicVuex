@@ -35,5 +35,10 @@ export default createStore({
         commit('decrement', res.data);
       })
     }
+  },
+  getters: {
+    counterSquared(state){
+      return state.counter * state.counter;
+    }
   }
 })
