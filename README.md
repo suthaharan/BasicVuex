@@ -20,4 +20,3 @@ $ npm run serve
 
 ```
 * Visit Local:   http://localhost:8081/  to view the app locally
-* 
